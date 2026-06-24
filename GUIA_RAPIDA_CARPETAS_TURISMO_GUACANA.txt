@@ -1,0 +1,61 @@
+GUIA RAPIDA DE CARPETAS - TURISMO GUACANA
+
+Use esta guia para saber donde guardar y buscar documentos.
+
+00_ADMINISTRACION_EMPRESA
+Documentos internos, cartas, tramites, asuntos administrativos y documentos por revisar que no pertenecen a un viaje especifico.
+
+01_BASE_DE_DATOS_CLIENTES
+Bases de datos, viajeros frecuentes, comisionistas, deudores y archivos maestros de clientes.
+
+02_COTIZACIONES
+Cotizaciones recientes o vigentes. Las cotizaciones antiguas no deben volver a mezclarse con archivos activos.
+
+03_VIAJES
+Carpeta principal de operacion. Aqui van pasajeros, seguros Magenta, acomodacion, transporte, pagos, liquidacion e itinerario de cada viaje.
+
+Formato recomendado para viajes:
+AAAA-MM_DESTINO
+
+Ejemplos:
+2026-05_SAN_ANDRES
+2025-12_MEDELLIN
+2025-11_UKUMARI
+
+Dentro de cada viaje crear:
+01_PASAJEROS
+02_SEGUROS_MAGENTA
+03_ACOMODACION
+04_TRANSPORTE
+05_PAGOS_Y_ABONOS
+06_LIQUIDACION
+07_ITINERARIO_Y_PUBLICIDAD
+
+04_CONTABILIDAD
+Cuentas de cobro, soportes contables y documentos financieros generales.
+
+06_MARKETING_E_ITINERARIOS
+Itinerarios, volantes, piezas de impresion, textos promocionales y documentos para vender viajes.
+
+07_LEGAL_CONTRATOS_RNT
+RUT, RNT, camara de comercio, certificados, contratos principales y documentos legales de la agencia.
+
+08_ARCHIVO_HISTORICO
+Duplicados, archivos antiguos, accesos directos, recuperados automaticos y copias heredadas. No borrar sin autorizacion.
+
+99_POR_CLASIFICAR
+Bandeja temporal. Debe estar casi vacia. Revisar semanalmente.
+
+REGLAS IMPORTANTES
+1. No crear carpetas llamadas Nueva carpeta.
+2. No mezclar documentos personales con viajes.
+3. No guardar bases de datos dentro de carpetas de viajes.
+4. No duplicar carpetas completas.
+5. Todo viaje nuevo debe tener ano, mes y destino.
+6. Si no se sabe donde guardar algo, dejarlo en 99_POR_CLASIFICAR y revisarlo pronto.
+
+Documentacion completa:
+GUIA_ESTRUCTURA_CARPETAS_TURISMO_GUACANA.md
+
+Reporte de documentos dudosos:
+00_ADMINISTRACION_EMPRESA/DOCUMENTOS_POR_REVISAR_LEGALES_PERSONALES/REPORTE_DOCUMENTOS_DUDOSOS.md

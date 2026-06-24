@@ -1,0 +1,122 @@
+================================================================================
+          TURISMO GUACANA - REQUISITOS DE CAPTURA DE DATOS MAESTROS
+================================================================================
+Este documento detalla los datos especificos que debemos solicitar a clientes
+y comisionistas para construir la nueva base de datos limpia desde cero.
+
+Se divide en tres secciones: Clientes (Pasajeros), Comisionistas (Aliados)
+y datos clave de Reservas.
+================================================================================
+
+--------------------------------------------------------------------------------
+1. CLIENTES (PASAJEROS)
+--------------------------------------------------------------------------------
+Esta informacion es la que se debe pedir a cada viajero antes de confirmar
+su participacion en cualquier viaje.
+
+[ OBLIGATORIOS ] (No se puede registrar al cliente sin estos datos)
+------------------------------------------------------------------
+* NOMBRE COMPLETO:
+  - Nombres y apellidos completos.
+  - Razon: Evitar confusiones con personas de nombres similares y para el
+           seguro de viaje (Magenta).
+
+* TIPO DE DOCUMENTO:
+  - C.C. (Cedula de Ciudadania), T.I. (Tarjeta de Identidad), 
+    C.E. (Cedula de Extranjeria), R.C. (Registro Civil), o Pasaporte.
+  - Razon: Requerido por la aseguradora y aerolineas/hoteles.
+
+* NUMERO DE DOCUMENTO:
+  - Numero de identificacion sin puntos ni guiones.
+  - Razon: Es la llave unica del cliente en el sistema. No puede haber dos
+           clientes con el mismo documento.
+
+* NUMERO DE CELULAR:
+  - Telefono de contacto de 10 digitos.
+  - Razon: Comunicacion directa para coordinar salida, itinerarios y WhatsApp.
+
+* CONTACTO DE EMERGENCIA (Nombre):
+  - Nombre de un familiar o allegado que NO viaje con la persona.
+  - Razon: Seguridad y requisito obligatorio para activar el seguro medico.
+
+* TELEFONO DE EMERGENCIA:
+  - Celular o telefono del contacto de emergencia.
+  - Razon: Llamar de inmediato en caso de cualquier incidente durante el viaje.
+
+
+[ OPCIONALES / RECOMENDADOS ] (Si no se tienen, se puede guardar el registro)
+-----------------------------------------------------------------------------
+* FECHA DE NACIMIENTO:
+  - Formato: AAAA-MM-DD (Año-Mes-Dia).
+  - Razon: Muy importante para calcular tarifas de niños, tarifas de adultos
+           mayores y para las condiciones de seguros de viaje.
+
+* MUNICIPIO DE RESIDENCIA:
+  - Ciudad o pueblo donde vive (ej. Apulo, Anapoima, Tocaima, Bogota).
+  - Razon: Permite planificar rutas de recogida y hacer promociones dirigidas.
+
+* CORREO ELECTRONICO:
+  - Direccion de correo electronico.
+  - Razon: Enviar facturas, itinerarios formales o cotizaciones complejas.
+
+* RESTRICCIONES ALIMENTARIAS / ALERGIAS:
+  - Especificar si es vegetariano, vegano, alergico al mani, gluten, etc.
+  - Razon: Garantizar que el servicio de alimentacion del viaje sea seguro.
+
+* CONDICIONES MEDICAS / OBSERVACIONES DE SALUD:
+  - Ej. Hipertension, movilidad reducida, problemas cardiacos.
+  - Razon: Prevenir emergencias y asignar la acomodacion adecuada (ej. primer piso).
+
+* AUTORIZA TRATAMIENTO DE DATOS (Habeas Data):
+  - Si / No.
+  - Razon: Cumplimiento legal para poder enviarles publicidad y promociones
+           por celular o correo en el futuro.
+
+--------------------------------------------------------------------------------
+2. COMISIONISTAS (ALIADOS DE VENTA)
+--------------------------------------------------------------------------------
+Informacion maestra de las personas que venden nuestros viajes a cambio de
+una comision.
+
+[ OBLIGATORIOS ]
+----------------
+* NOMBRE COMPLETO:
+  - Nombre del comisionista aliado.
+  - Razon: Identificar quien realiza las ventas.
+
+* CELULAR:
+  - Numero de contacto del comisionista.
+  - Razon: Comunicacion y coordinacion de pagos de comisiones.
+
+* MUNICIPIO DE OPERACION:
+  - Donde realiza principalmente la venta (ej. Tocaima, Apulo, Anapoima).
+  - Razon: Conocer la cobertura de nuestros aliados de venta.
+
+
+[ OPCIONALES / RECOMENDADOS ]
+-----------------------------
+* METODO DE PAGO PREFERIDO:
+  - Ej. Nequi, Daviplata, Cuenta de ahorros (Banco y Numero).
+  - Razon: Facilitar la transferencia y liquidacion de sus comisiones.
+
+* TIPO DE COMISION ESTANDAR:
+  - Valor fijo por pasajero (ej. $15.000 o $50.000) o porcentaje de venta.
+  - Razon: Automatizar el calculo de sus ganancias en las liquidaciones.
+
+--------------------------------------------------------------------------------
+3. DATOS PARA REGISTRAR UNA RESERVA (CUANDO EL CLIENTE COMPRA UN VIAJE)
+--------------------------------------------------------------------------------
+Cuando un cliente decide viajar, estos son los datos que conectan al Cliente
+con el Viaje:
+
+* CLIENTE (Identificado por Cedula) -> Obligatorio
+* VIAJE (Destino y Fecha) -> Obligatorio
+* COMISIONISTA QUE VENDIO (Si aplica, o "Venta Directa") -> Obligatorio
+* MUNICIPIO DE SALIDA (Donde aborda el bus) -> Obligatorio
+* VALOR TOTAL DE LA RESERVA -> Obligatorio
+* VALOR ABONADO (Pagos parciales) -> Obligatorio
+* SALDO PENDIENTE (Se calcula solo: Total - Abonado) -> Obligatorio
+* ASIGNACION DE BUS Y SILLA -> Opcional
+* ASIGNACION DE HOTEL Y HABITACION -> Opcional
+* ESTADO DE LA RESERVA (Interesado, Reservado, Abonado, Pagado) -> Obligatorio
+================================================================================
